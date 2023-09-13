@@ -6,11 +6,12 @@ export default async function getAllCars() {
   try {
     const res = await fetch(DATA_SOURCE_URL)
 
-    const cars: any = await res.json()
+    const cars = await res.json()
+    const firstCarMake: Car[] = cars.cars
 
-    // console.log(cars)
+    console.log(firstCarMake)
 
-    return cars
+    return firstCarMake
 
   } catch (error) {
     throw new Error(`[GETTING ALL CARS] ${error}`)

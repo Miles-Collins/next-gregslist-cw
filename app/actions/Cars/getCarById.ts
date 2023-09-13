@@ -1,4 +1,5 @@
 import React from 'react'
+import toast from 'react-hot-toast'
 const DATA_SOURCE_URL = "https://myfakeapi.com/api/cars"
 
 export default async function getCarById(carId: string) {

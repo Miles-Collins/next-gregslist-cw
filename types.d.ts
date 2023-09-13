@@ -8,3 +8,10 @@ type Car = {
   price: string
   availability: boolean
 }
+
+interface Person {
+  firstName: string;
+  lastName: string;
+  message: string;
+  contact: number;
+}

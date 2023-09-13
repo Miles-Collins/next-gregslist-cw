@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import toast from "react-hot-toast"
 
 const DATA_SOURCE_URL = "https://myfakeapi.com/api/cars/"
 
@@ -9,7 +10,8 @@ export default async function getAllCars() {
     const cars = await res.json()
     const firstCarMake: Car[] = cars.cars
 
-    console.log(firstCarMake)
+    // console.log(firstCarMake)
+    
 
     return firstCarMake
 

@@ -22,7 +22,7 @@ export default async function CarsPage() {
           <CarInfo key={car.id} id={car.id} car={car.car} car_model={car.car_model} car_color={car.car_color} car_model_year={car.car_model_year} car_vin={car.car_vin} price={car.price} availability={car.availability} />
         ))
       )}
-    </div>
+      </div>
     </Container>
   )
 }

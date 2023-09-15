@@ -1,10 +1,12 @@
 'use client'
 
 import Button from "@/components/Buttons/Button";
+import usePersonModal from "@/hooks/usePersonModal";
 import { useCallback, useState } from "react";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
+  const personModal = usePersonModal()
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value)
@@ -17,7 +19,7 @@ export default function Home() {
       </div>
       <div className="flex h-[85dvh] items-center justify-center">
       <div className="w-32">
-        <Button onClick={toggleOpen} label={"Form Modal"} type={"button"} outline />
+        <Button onOpen={personModal.onOpen} label={"Form Modal"} type={"button"} outline />
       </div>
         </div>
     </main>

@@ -15,3 +15,11 @@ interface Person {
   message: string;
   contact: number;
 }
+
+interface Product {
+  title: string
+  price: number
+  description: string
+  image: string
+  category: string
+}
